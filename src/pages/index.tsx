@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
+import { HomeView } from '@/components/HomeView'
 
 
 export default function Home() {
@@ -12,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h3>Hello World!</h3>
+        <HomeView/>
       </main>
     </>
   )
