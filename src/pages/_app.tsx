@@ -1,11 +1,18 @@
-import Layout from "@/hoc/Layout";
 import "@/styles/globals.css";
+
 import type { AppProps } from "next/app";
+
+import { ThemeProvider } from "@mui/material";
+import { theme } from "@/theme/mainTheme";
+
+import Layout from "@/hoc/Layout";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ThemeProvider theme={theme}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ThemeProvider>
   );
 }

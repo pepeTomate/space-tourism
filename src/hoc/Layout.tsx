@@ -1,4 +1,5 @@
 import { Navbar } from "@/components";
+import LayoutStyles from "@/styles/Layout.module.css"
 import React from "react";
 
 interface ILayout {
