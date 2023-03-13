@@ -74,42 +74,60 @@ export const theme = createTheme({
     fontFamily:
       "Open Sans,Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif",
     htmlFontSize: 10,
-
     fontSize: 14,
     h1: {
-      fontSize: "4rem",
-      fontWeight: 600,
+      fontSize: "150px",
+      fontWeight: 400,
+      color: "white",
+      fontFamily: "Bellefair"
     },
     h2: {
-      fontSize: "3.4rem",
+      fontSize: "100px",
       fontWeight: 600,
+      color: "white"
     },
     h3: {
-      fontSize: "3rem",
+      fontSize: "56px",
       fontWeight: 600,
+      color: "white"
     },
     h4: {
-      fontSize: "2.4rem",
-      fontWeight: 600,
+      fontSize: "32px",
+      fontWeight: 400,
+      color: "white",
+      fontFamily: "Bellefair"
     },
     h5: {
-      fontSize: "1.8rem",
-      fontWeight: 600,
+      fontSize: "28px",
+      fontWeight: 400,
+      color: "#D0D6F9",
+      fontFamily: "Barlow Condensed",
+      letterSpacing: "0.2rem"
     },
     h6: {
-      fontSize: "1.5rem",
+      fontSize: "16px", 
+      fontWeight: 400,
+      fontFamily: "Barlow Condensed",
+      color: "#D0D6F9"
+    },
+    body2: {
+      fontSize: "1rem",
       fontWeight: 600,
+      color: "white"
     },
     subtitle1: {
       fontSize: "2rem",
       fontWeight: 600,
       lineHeight: 1.2,
       textTransform: "uppercase",
+      color: "white"
+
     },
     caption: {
       fontSize: "1.4rem",
       fontWeight: 300,
       lineHeight: 1,
+      color: "white"
     },
   },
   breakpoints: {
