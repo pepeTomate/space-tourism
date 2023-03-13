@@ -1,21 +1,49 @@
 import { ImageBg, Navbar } from "@/components";
 import LayoutStyles from "@/styles/Layout.module.css";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import Link from "next/link";
 import React from "react";
-import backgroundImg from "../../public/background-home-desktop.jpg";
+import { theme } from "@/theme/mainTheme";
+
+import routes, { isActiveRoute } from "@/routes";
+import backgroundImg from "../../public/home/background-home-desktop.jpg";
+import { useRouter } from "next/router";
+import { StaticImageData } from "next/image";
 
 interface ILayout {
   children: React.ReactNode;
 }
 
 const Layout: React.FC<ILayout> = ({ children }) => {
-  return (
+    const location = useRouter();
+    console.log(location);
+    let actualPath = routes.find((route)=> {
+        return route.path === location.asPath
+    })
+    console.log(actualPath);
+
+    let actualPathMedia:StaticImageData|string = "";
+    const matchesMobile = useMediaQuery(theme.breakpoints.down("sm"));
+    const matchesTablet = useMediaQuery(theme.breakpoints.between('sm',"lg"));
+    
+    if(matchesMobile) {
+        actualPathMedia = ((actualPath?.bgSource.mobile)as StaticImageData).src;
+    }
+    else if(matchesTablet) {
+        actualPathMedia = ((actualPath?.bgSource.tablet)as StaticImageData).src;
+    }
+    else {
+        actualPathMedia = ((actualPath?.bgSource.desktop)as StaticImageData).src;
+    }
+    console.log(((actualPath?.bgSource.mobile)as StaticImageData).src);
+    const aux = ((actualPath?.bgSource.mobile)as StaticImageData).src;
+    console.log(actualPathMedia);
+    return (
     <>
       <Box
         sx={{
-          height: "100vh",
-          width: "100%",
+          minHeight: "100vh",
+          minWidth: "100%",
           backgroundColor: "transparent",
           position: "relative",
           display: "flex",
@@ -31,7 +59,7 @@ const Layout: React.FC<ILayout> = ({ children }) => {
           bottom={0}
           zIndex={1}
         ></Box> */}
-        <ImageBg image={backgroundImg} quality={100}/>
+        <ImageBg image={actualPathMedia || backgroundImg} quality={100}/>
 
         <Box
           sx={{

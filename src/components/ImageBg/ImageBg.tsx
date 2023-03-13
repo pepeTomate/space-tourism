@@ -1,5 +1,5 @@
 import { Box, SxProps, Theme } from "@mui/material";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 export interface INextImage {
 	src: string;
@@ -9,7 +9,7 @@ export interface INextImage {
   }
 
 interface IProps {
-  image: string | INextImage;
+  image: string | StaticImageData;
   unoptimized?: boolean;
   sx?: SxProps<Theme>;
   quality?: number;

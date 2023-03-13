@@ -9,7 +9,6 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background-color:blue;
   font-family: 'Barlow Condensed', sans-serif;
   font-family: 'Bellefair', serif;
   font-family: 'Open Sans', sans-serif;
@@ -24,4 +23,10 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+/* Clases custom para efectos */
+
+.navActiveLink {
+  border-bottom: 1px solid white;
 }

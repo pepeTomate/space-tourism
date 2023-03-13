@@ -6,8 +6,8 @@ export interface HomeViewInterface {}
 const HomeView: React.FC<HomeViewInterface> = () => {
   return (
     <>
-      <Grid container marginTop="5rem" paddingX="5rem">
-        <Grid item lg={6} sm={12} paddingRight="100px">
+      <Grid container marginTop="10rem" paddingLeft="10rem">
+        <Grid item lg={6} sm={12} paddingRight="150px">
           <Typography variant="h5">SO, YOU WANT TO TRAVEL TO</Typography>
           <Typography variant="h1">SPACE</Typography>
           <Typography variant="h6">
@@ -39,6 +39,7 @@ const HomeView: React.FC<HomeViewInterface> = () => {
                 width: "250px",
                 borderRadius: "125px",
                 paddingBottom: "10px",
+				marginRight: "100px"
               }}
             >
               <Typography variant="h4" color="black">
