@@ -9,8 +9,8 @@ export interface Iprops {
 
 const Logo : React.FC<Iprops> = ({variant="dark", imgWidth }) => {
 	return (
-		<Box display="flex" width="fit-content">
-			<Box width={imgWidth || "90px"}>
+		<Box width="fit-content">
+			<Box width={imgWidth || "90px"} display="flex" alignItems="center">
 				<Image src={LogoSVG} alt="Logo"/>
 			</Box>
 		</Box>

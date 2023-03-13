@@ -3,7 +3,7 @@ import LayoutStyles from "@/styles/Layout.module.css";
 import { Box, Typography } from "@mui/material";
 import Link from "next/link";
 import React from "react";
-import backgroundImg from "../../public/background-crew-desktop.jpg";
+import backgroundImg from "../../public/background-home-desktop.jpg";
 
 interface ILayout {
   children: React.ReactNode;
@@ -31,7 +31,7 @@ const Layout: React.FC<ILayout> = ({ children }) => {
           bottom={0}
           zIndex={1}
         ></Box> */}
-        <ImageBg image={backgroundImg} />
+        <ImageBg image={backgroundImg} quality={100}/>
 
         <Box
           sx={{

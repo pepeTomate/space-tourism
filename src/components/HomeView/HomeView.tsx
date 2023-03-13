@@ -9,11 +9,7 @@ const HomeView: React.FC<HomeViewInterface> = () => {
       <Grid container marginTop="5rem" paddingX="5rem">
         <Grid item lg={6} sm={12} paddingRight="100px">
           <Typography variant="h5">SO, YOU WANT TO TRAVEL TO</Typography>
-          <Typography
-            variant="h1"
-          >
-            SPACE
-          </Typography>
+          <Typography variant="h1">SPACE</Typography>
           <Typography variant="h6">
             Let’s face it; if you want to go to space, you might as well
             genuinely go to outer space and not hover kind of on the edge of it.
@@ -29,25 +25,27 @@ const HomeView: React.FC<HomeViewInterface> = () => {
             display: "flex",
             placeContent: "flex-end",
             alignItems: "flex-end",
-			paddingRight: "5rem"
+            paddingRight: "5rem",
           }}
         >
-          <Box
-            sx={{
-              display: "flex",
-              placeContent: "center",
-              alignItems: "center",
-              backgroundColor: "white",
-              height: "250px",
-              width: "250px",
-              borderRadius: "125px",
-			  paddingBottom: "10px"
-            }}
-          >
-            <Link href="/destination">
-              <Typography variant="h4" color="black">EXPLORE</Typography>
-            </Link>
-          </Box>
+          <Link href="/destination" passHref>
+            <Box
+              sx={{
+                display: "flex",
+                placeContent: "center",
+                alignItems: "center",
+                backgroundColor: "white",
+                height: "250px",
+                width: "250px",
+                borderRadius: "125px",
+                paddingBottom: "10px",
+              }}
+            >
+              <Typography variant="h4" color="black">
+                EXPLORE
+              </Typography>
+            </Box>
+          </Link>
         </Grid>
       </Grid>
     </>
